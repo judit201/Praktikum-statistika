@@ -1,0 +1,36 @@
+data_arief_csv = read.csv("C:/Users/Arief/Documents/Semester 3/prak statistika/data_arief.csv") 
+View(data_arief_csv)
+
+arief <- data_arief_csv[data_arief_csv$tinggi.badan==168,]
+View(arief)
+
+data_arief_csv$tinggi.badan <- ifelse(data_arief_csv$tinggi.badan > 168,c("tinggi"),c("pendek"))
+View(arief)
+
+data_arief_csv$Jurusan <- c("Infor21")
+data_arief_csv$Fakultas<- c("FTI")
+View(data_arief_csv)
+
+data_arief_csv$Fakultas<-NULL
+View(data_arief_csv)
+
+data_arief_csv.namagen <- data_arief_csv[1:2]
+View(data_arief_csv.namagen)
+
+data_arief_csv.namagen1 <- data_arief_csv[3:4]
+View(data_arief_csv.namagen1)
+
+data_arief_csv.gabungan<-cbind(data_arief_csv.namagen,data_arief_csv.namagen1)
+View(data_arief_csv.gabungan)
+
+data_baris_arief_csv.1sampai5<-data_arief_csv[1:5,]
+View(data_baris_arief_csv.1sampai5)
+
+data_baris_arief_csv.25sampai30<-data_arief_csv[25:30,]
+View(data_baris_arief_csv.25sampai30)
+
+data_baris_arief_csv.gabungan<-rbind(data_baris_arief_csv.1sampai5,data_baris_arief_csv.25sampai30)
+View(data_baris_arief_csv.gabungan)
+
+data_arief_csv.sort<-data_arief_csv[order(data_arief_csv$waktu.perjalanan),]
+View(data_arief_csv.sort)
