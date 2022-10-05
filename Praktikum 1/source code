@@ -1,0 +1,11 @@
+data_arief= read.delim("clipboard")
+View(data_arief)
+mean(data_arief$tinggi.badan)
+str(data_arief)
+
+data_arief_csv = read.csv("C:/Users/Arief/Documents/prak statistika/arief_prak1.csv")
+View(data_arief_csv)
+install.packages("xlsx")
+library("xlsx")
+data_arief_xlsx=read.xlsx("C:/Users/Arief/Documents/prak statistika/arief_prak1.xlsx",1)
+View(data_arief_xlsx)
