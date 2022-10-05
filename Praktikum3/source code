@@ -1,0 +1,34 @@
+data_arief = read.delim("clipboard")
+View(data_arief)
+
+arief <- data_arief[data_arief$Bedrooms==2,]  
+View(arief)
+
+arief$Bathrooms <- ifelse(arief$Bathrooms > 2, c("large"), c("small"))
+View(arief)
+
+arief$newvariable <- ifelse(arief$Offers > 2, c("large"), c("small")) 
+View(arief)
+
+arief$newvariable <- arief$Price/arief$SqFt
+View(arief)
+
+arief$newvariable<-NULL
+View(arief)
+
+data_arief.kolom1dan2 <- data_arief[,1:2] 
+View(data_arief.kolom1dan2)
+
+data_arief.kolom3dan4 <- data_arief[,3:4] 
+View(data_arief.kolom3dan4)
+
+data_arief.kolom1sd4<-cbind(data_arief.kolom1dan2, data_arief.kolom3dan4) 
+View(data_arief.kolom1sd4)
+
+data_arief.baris1sd3 <- data_arief[1:3,] 
+data_arief.baris4sd6 <- data_arief[4:6,] 
+data_arief.baris1sd6 <- rbind(data_arief.baris1sd3, data_arief.baris4sd6) 
+View(data_arief.baris1sd6)
+
+data_arief.sort<-data_arief[order(data_arief$Price),] 
+View(data_arief.sort)
