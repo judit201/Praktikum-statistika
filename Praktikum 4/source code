@@ -1,0 +1,3 @@
+arief=read.delim("clipboard")
+View(arief)
+t.test(arief$Volume, conf.level = 0.95)
