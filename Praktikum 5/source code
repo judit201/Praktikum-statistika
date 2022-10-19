@@ -1,0 +1,5 @@
+arief=read.delim("clipboard")
+View(arief)
+str(arief)
+mean(arief$Volume)
+t.test(arief$Volume, mu=10)
