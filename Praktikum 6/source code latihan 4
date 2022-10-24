@@ -1,0 +1,12 @@
+#Latihan 4
+data_arief=read.csv2("C:/Users/Arief/Documents/Semester 3/prak statistika/DirectMarketing.csv")
+hist(data_arief$AmountSpent)
+arief=density(data_arief$AmountSpent)
+plot(arief)
+
+library(ggplot2)
+data_arief1=read.csv2("C:/Users/Arief/Documents/Semester 3/prak statistika/houseprice.csv")
+qplot(data_arief1$SqFt, data_arief1$Price)
+qplot(data_arief1$Bedrooms, data_arief1$Price)
+qplot(data_arief1$Bathrooms, data_arief1$Price)
+qplot(data_arief1$Offers, data_arief1$Price)
