@@ -1,0 +1,34 @@
+# Latihan 1
+summary(iris)
+
+head(iris)
+
+by(iris$Petal.Length, iris$Species, summary)
+
+mean(iris$Sepal.Length)
+
+var(iris$Sepal.Length)
+
+boxplot(iris$Petal.Length)
+
+boxplot(Petal.Length ~ Species, data=iris, main="Petal Length", xlab="Species", ylab="Length")
+
+# Latihan 2
+hist(iris$Petal.Length)
+
+hist(iris$Sepal.Width)
+
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+
+d=density(iris$Petal.Length)
+plot(d)
+
+d=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (d)
+
+#Latihan 3
+data_arief = read.csv2("C:/Users/Arief/Documents/Semester 3/prak statistika/arief.csv")
+qplot(data_arief$AmountSpent, data_arief$Salary)
+plot(data_arief$AmountSpent, data_arief$Salary)
