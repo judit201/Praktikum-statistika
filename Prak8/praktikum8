@@ -1,0 +1,63 @@
+#Latihan pertama – Praktikum no 2
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.model_selection import train_test_split, cross_val_score, KFold, GridSearchCV
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier,export_graphviz
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
+
+#latihan kedua - tugas no 1
+col_list=['Price', 'Bedrooms']
+numhouse = data_arief[data_arief.columns[data_arief.columns.isin(col_list)]]
+numhouse.plot.scatter(x='Bedrooms', y='Price')
+
+#latihan kedua - no 2
+col_list=['Price', 'Bathrooms']
+numhouse = data_arief[data_arief.columns[data_arief.columns.isin(col_list)]]
+numhouse.plot.scatter(x='Bathrooms', y='Price')
+
+#Latihan pertama – Praktikum no 3
+data_arief= pd.read_csv('/content/houseprice.csv')
+data_arief.head(5)
+
+#latihan kedua - tugas no 3
+col_list=['Price', 'Bathrooms']
+numhouse = data_arief[data_arief.columns[data_arief.columns.isin(col_list)]]
+plt.figure(figsize=(15,5))
+numhouse.boxplot(by='Bathrooms')
+plt.show()
+
+#Latihan pertama – Praktikum no 4
+col_list=['Price']
+numhouse = data_arief[data_arief.columns[data_arief.columns.isin(col_list)]]
+plt.figure(figsize=(10,5))
+numhouse.boxplot(sym='r*', grid=False)
+plt.show()
+
+#Latihan pertama – Praktikum no 5
+plt.figure(figsize=(15,5))
+plt.subplot(121)
+data_arief['Price'].plot.hist(bins=10, title='Price')
+plt.show()
+
+#Latihan pertama – Praktikum no 6
+col_list=['Price', 'SqFt']
+numhouse = data_arief[data_arief.columns[data_arief.columns.isin(col_list)]]
+numhouse.plot.scatter(x='SqFt', y='Price')
+
+#Latihan pertama – Praktikum no 7
+col_list=['Price', 'Bedrooms']
+numhouse = data_arief[data_arief.columns[data_arief.columns.isin(col_list)]]
+plt.figure(figsize=(15,5))
+numhouse.boxplot(by='Bedrooms')
+plt.show()
+
+data= pd.read_csv('/content/houseprice.csv')
+
+from google.colab import files
+import pandas as pd
+
+uploaded = files.upload()
+
+data= pd.read_csv('/content/houseprice.csv')
