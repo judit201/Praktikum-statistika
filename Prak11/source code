@@ -1,0 +1,27 @@
+#latihan pertama
+#1
+df_arief = read.delim("clipboard")
+View(df_arief)
+
+#2
+model <- aov(korosi~metode, data=df_arief)
+summary(model)
+
+#3
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+#latihan kedua
+#1
+df_arief=PlantGrowth
+View(df_arief)
+
+#2
+model <- aov(weight~group, data=df_arief)
+summary(model)
+
+#3
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+
