@@ -1,0 +1,19 @@
+#latihan pertama regresi
+#1
+df_arief=read.delim("clipboard")
+head(df_arief)
+model_reg=lm(df_arief$Y~df_arief$X)
+summary(model_reg)
+
+#latihan kedua 
+#1
+df_arief=read.delim("clipboard")
+df_arief$brick_dummy <- ifelse(df_arief$Brick =="Yes", 1,0)
+df_arief$N_dummy1 <- ifelse(df_arief$Neighborhood =="West", 1,0)
+df_arief$N_dummy2 <- ifelse(df_arief$Neighborhood =="North", 1,0)
+model=lm(df_arief$Price~df_arief$SqFt+df_arief$Bedrooms+df_arief$Bathrooms+df_arief$brick_dummy+df_arief$N_dummy1+df_arief$N_dummy2)
+summary(model)
+
+#2
+by(df_arief$Price, df_arief$Neighborhood, mean)
+by(df_arief$Price, df_arief$Brick, mean)
