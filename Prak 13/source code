@@ -1,0 +1,31 @@
+#latihan pertama
+#1
+dataku_arief = read.delim('clipboard')
+View(dataku_arief)
+wilcox.test(dataku_arief$sebelum,dataku_arief$sesudah,paired=TRUE)
+
+#2
+dataku_arief = read.delim('clipboard')
+View(dataku_arief)
+wilcox.test(dataku_arief$sebelum,dataku_arief$sesudah,paired=TRUE)
+
+#latihan kedua
+#1
+df_arief=read.delim("clipboard")
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_arief$obat~df_arief$grup)
+# where y is numeric and A is A binary factor
+head(df_arief)
+View(df_arief)
+rank(df_arief$obat)
+
+#latihan ketiga
+#1
+dataku_arief = read.delim("clipboard")
+View(dataku_arief)
+wilcox.test(dataku_arief$Ganjil,dataku_arief$Genap ,paired=TRUE)
+
+#2
+dataku_arief = read.delim("clipboard")
+View(dataku_arief)
+wilcox.test(dataku_arief$caffeine,dataku_arief$placebo ,paired=TRUE)
